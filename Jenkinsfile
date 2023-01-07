@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build Application') {
              steps{
-                build job: 'build-web-application'
+                build job: 'buildWebApplicationtwo'
             }
         }
         stage('Deploy to Staging Environment'){
@@ -16,7 +16,7 @@ pipeline {
                 timeout(time:5, unit:'DAYS'){
                     input message:'Approve PRODUCTION Deployment?'
                 }
-                build job: 'Deploy-Application-Production-Environment'
+                build job: 'Deploy-Application-Production-Environmentt'
             }
         }
     }
